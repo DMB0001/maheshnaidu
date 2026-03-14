@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Mahesh Babu Dorepalli Farm Store</title>
+
+<style>
+
+body{
+margin:0;
+font-family:Segoe UI,Arial;
+background:#000000;
+color:white;
+scroll-behavior:smooth;
+}
+
+/* NAVBAR */
+
+nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:18px 40px;
+background:#050505;
+position:sticky;
+top:0;
+z-index:10;
+}
+
+.logo{
+font-weight:bold;
+font-size:22px;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin-left:20px;
+padding:8px 16px;
+background:#111;
+border-radius:6px;
+}
+
+/* HERO */
+
+.hero{
+text-align:center;
+padding:90px 10%;
+background:radial-gradient(circle at top,#111,#000);
+}
+
+.hero h1{
+font-size:48px;
+}
+
+/* SECTION */
+
+section{
+padding:70px 10%;
+}
+
+/* PRODUCTS */
+
+.products{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:25px;
+}
+
+.card{
+background:#111;
+border-radius:12px;
+overflow:hidden;
+}
+
+.card img{
+width:100%;
+height:180px;
+object-fit:cover;
+}
+
+.card-body{
+padding:15px;
+}
+
+.price{
+margin-top:5px;
+color:#ccc;
+}
+
+button{
+width:100%;
+padding:10px;
+border:none;
+background:black;
+color:white;
+border-radius:6px;
+cursor:pointer;
+}
+
+/* CART */
+
+.cart{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#111;
+padding:20px;
+border-radius:10px;
+}
+
+/* ABOUT */
+
+.info{
+background:#111;
+padding:30px;
+border-radius:10px;
+}
+
+/* CONTACT */
+
+iframe{
+width:100%;
+height:300px;
+border:none;
+border-radius:10px;
+}
+
+/* FOOTER */
+
+footer{
+text-align:center;
+padding:30px;
+background:#050505;
+margin-top:40px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<nav>
+
+<div class="logo">🌾 Mahesh Babu Dorepalli Farm Store</div>
+
+<div>
+<a href="#home">Home</a>
+<a href="#products">Products</a>
+<a href="#about">About</a>
+<a href="#contact">Contact</a>
+</div>
+
+</nav>
+
+<!-- HOME -->
+
+<section id="home" class="hero">
+
+<h1>Fresh Natural Farm Food</h1>
+
+<p>
+Chemical-free vegetables grown using traditional natural farming methods.
+</p>
+
+</section>
+
+<!-- PRODUCTS -->
+
+<section id="products">
+
+<h2>Farm Vegetables</h2>
+
+<div class="products">
+
+<div class="card">
+<img src="https://organic-gold-1qgd8z0rlx.edgeone.app/Scientific-name-for-Tomatoes-1767962795824-2.jpg"
+onerror="this.src='https://images.unsplash.com/photo-1542838132-92c53300491e'">
+<div class="card-body">
+<h3>Tomato</h3>
+<div class="price">₹40 / kg</div>
+<button onclick="add()">Add to Cart</button>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1540420773420-3366772f4999">
+<div class="card-body">
+<h3>Spinach</h3>
+<div class="price">₹30 / bunch</div>
+<button onclick="add()">Add to Cart</button>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1445282768818-728615cc910a">
+<div class="card-body">
+<h3>Carrot</h3>
+<div class="price">₹50 / kg</div>
+<button onclick="add()">Add to Cart</button>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1518977676601-b53f82aba655">
+<div class="card-body">
+<h3>Potato</h3>
+<div class="price">₹30 / kg</div>
+<button onclick="add()">Add to Cart</button>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1508747703725-719777637510">
+<div class="card-body">
+<h3>Onion</h3>
+<div class="price">₹35 / kg</div>
+<button onclick="add()">Add to Cart</button>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1603048719531-9ecb5f8f37c1">
+<div class="card-body">
+<h3>Cabbage</h3>
+<div class="price">₹35 / kg</div>
+<button onclick="add()">Add to Cart</button>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1582515073490-dc4f6c48d6c4">
+<div class="card-body">
+<h3>Cauliflower</h3>
+<div class="price">₹45 / kg</div>
+<button onclick="add()">Add to Cart</button>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1598514983318-2f64f8f4796c">
+<div class="card-body">
+<h3>Okra</h3>
+<div class="price">₹50 / kg</div>
+<button onclick="add()">Add to Cart</button>
+</div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1594282486552-05a4f6c6c2c9">
+<div class="card-body">
+<h3>Beans</h3>
+<div class="price">₹60 / kg</div>
+<button onclick="add()">Add to Cart</button>
+</div>
+</div>
+
+</div>
+
+</section>
+
+<!-- ABOUT -->
+
+<section id="about">
+
+<h2>About Natural Farming</h2>
+
+<div class="info">
+
+<p>
+Our farm follows traditional natural farming methods without chemical fertilizers or pesticides.
+We use ancient agricultural techniques that protect soil health and produce healthy vegetables.
+</p>
+
+</div>
+
+</section>
+
+<!-- CONTACT -->
+
+<section id="contact">
+
+<h2>Contact Our Farm</h2>
+
+<p><b>Phone:</b> 7780339811</p>
+<p><b>Email:</b> maheshbabudorepalli@gmail.com</p>
+
+<p>
+Uppalapadu Village<br>
+Kamavarapukota Mandal<br>
+Eluru District<br>
+Andhra Pradesh
+</p>
+
+<br>
+
+<iframe src="https://maps.google.com/maps?q=Kamavarapukota%20Eluru&t=&z=13&ie=UTF8&iwloc=&output=embed"></iframe>
+
+</section>
+
+<!-- CART -->
+
+<div class="cart">
+
+Cart Items: <span id="cart">0</span>
+
+<br><br>
+
+<button onclick="buy()">Buy</button>
+
+</div>
+
+<footer>
+
+Fresh Natural Farm Vegetables
+
+</footer>
+
+<script>
+
+let cart=0
+
+function add(){
+cart++
+document.getElementById("cart").innerText=cart
+}
+
+function buy(){
+alert("Call 7780339811 to place your order")
+}
+
+</script>
+
+</body>
+</html>
