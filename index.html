@@ -15,8 +15,6 @@ color:white;
 scroll-behavior:smooth;
 }
 
-/* NAVBAR */
-
 nav{
 display:flex;
 justify-content:space-between;
@@ -42,8 +40,6 @@ background:#111;
 border-radius:6px;
 }
 
-/* HERO */
-
 .hero{
 text-align:center;
 padding:90px 10%;
@@ -54,13 +50,9 @@ background:radial-gradient(circle at top,#111,#000);
 font-size:48px;
 }
 
-/* SECTION */
-
 section{
 padding:70px 10%;
 }
-
-/* PRODUCTS */
 
 .products{
 display:grid;
@@ -99,8 +91,6 @@ border-radius:6px;
 cursor:pointer;
 }
 
-/* CART */
-
 .cart{
 position:fixed;
 bottom:20px;
@@ -108,17 +98,14 @@ right:20px;
 background:#111;
 padding:20px;
 border-radius:10px;
+width:200px;
 }
-
-/* ABOUT */
 
 .info{
 background:#111;
 padding:30px;
 border-radius:10px;
 }
-
-/* CONTACT */
 
 iframe{
 width:100%;
@@ -127,7 +114,16 @@ border:none;
 border-radius:10px;
 }
 
-/* FOOTER */
+.payment{
+display:none;
+text-align:center;
+}
+
+.payment img{
+width:260px;
+border-radius:14px;
+margin-top:20px;
+}
 
 footer{
 text-align:center;
@@ -144,7 +140,7 @@ margin-top:40px;
 
 <nav>
 
-<div class="logo">🌾 Mahesh Babu Dorepalli Farm Store</div>
+<div class="logo"> Mahesh Babu Dorepalli Farm Store</div>
 
 <div>
 <a href="#home">Home</a>
@@ -154,8 +150,6 @@ margin-top:40px;
 </div>
 
 </nav>
-
-<!-- HOME -->
 
 <section id="home" class="hero">
 
@@ -167,30 +161,27 @@ Chemical-free vegetables grown using traditional natural farming methods.
 
 </section>
 
-<!-- PRODUCTS -->
-
 <section id="products">
 
-<h2>Farm Vegetables</h2>
+<h2>FRESH FARM PRODUCTS</h2>
 
 <div class="products">
 
 <div class="card">
-<img src="https://above-olive-pgkasf8v6l.edgeone.app/IMG-20260315-WA0005.jpg"
->
+<img src="https://images.unsplash.com/photo-1567306226416-28f0efdc88ce">
 <div class="card-body">
-<h3>Tomato</h3>
+<h3>Apple</h3>
 <div class="price">₹40 / kg</div>
-<button onclick="add()">Add to Cart</button>
+<button onclick="add(40)">Add to Cart</button>
 </div>
 </div>
 
 <div class="card">
-<img src="https://popular-green-9swijlq5ec.edgeone.app/How-to-Grow-Spinach-Feature.jpg">
+<img src="https://images.unsplash.com/photo-1576045057995-568f588f82fb">
 <div class="card-body">
 <h3>Spinach</h3>
 <div class="price">₹30 / bunch</div>
-<button onclick="add()">Add to Cart</button>
+<button onclick="add(30)">Add to Cart</button>
 </div>
 </div>
 
@@ -199,7 +190,7 @@ Chemical-free vegetables grown using traditional natural farming methods.
 <div class="card-body">
 <h3>Carrot</h3>
 <div class="price">₹50 / kg</div>
-<button onclick="add()">Add to Cart</button>
+<button onclick="add(50)">Add to Cart</button>
 </div>
 </div>
 
@@ -208,7 +199,7 @@ Chemical-free vegetables grown using traditional natural farming methods.
 <div class="card-body">
 <h3>Potato</h3>
 <div class="price">₹30 / kg</div>
-<button onclick="add()">Add to Cart</button>
+<button onclick="add(30)">Add to Cart</button>
 </div>
 </div>
 
@@ -217,51 +208,48 @@ Chemical-free vegetables grown using traditional natural farming methods.
 <div class="card-body">
 <h3>Onion</h3>
 <div class="price">₹35 / kg</div>
-<button onclick="add()">Add to Cart</button>
+<button onclick="add(35)">Add to Cart</button>
 </div>
 </div>
 
 <div class="card">
-<img src="https://permanent-aquamarine-5pjkuicloz.edgeone.app/Health-GettyImages-2196247248-fb2aa495bc004bd5806fa535768f54bb.jpg">
+    <img src="https://images.unsplash.com/photo-1563565375-f3fdfdbefa83">
 <div class="card-body">
-<h3>Cabbage</h3>
+<h3>Capsicum</h3>
 <div class="price">₹35 / kg</div>
-<button onclick="add()">Add to Cart</button>
+<button onclick="add(35)">Add to Cart</button>
 </div>
 </div>
 
 <div class="card">
-<img src="https://abstract-sapphire-7hwjzg8egx.edgeone.app/how-to-grow-cauliflower-1403494-hero-76cf5f524a564adabb1ac6adfa311482.jpg">
-<div class="card-body">
+<img src="https://images.unsplash.com/photo-1510627498534-cf7e9002facc">
 <h3>Cauliflower</h3>
 <div class="price">₹45 / kg</div>
-<button onclick="add()">Add to Cart</button>
+<button onclick="add(45)">Add to Cart</button>
 </div>
 </div>
 
 <div class="card">
-<img src="https://ethical-scarlet-q3dspyxczu.edgeone.app/IMG-20260315-WA0012.jpg">
+<img src="https://images.unsplash.com/photo-1587049352851-8d4e89133924">
 <div class="card-body">
-<h3>    Beetroot</h3>
+<h3>Honey</h3>
 <div class="price">₹50 / kg</div>
-<button onclick="add()">Add to Cart</button>
+<button onclick="add(50)">Add to Cart</button>
 </div>
 </div>
 
 <div class="card">
-<img src="https://lazy-teal-p6mqk0birh.edgeone.app/IMG-20260315-WA0011.jpg">
-<div class="card-body">
-<h3>Beans</h3>
+<img src="https://images.unsplash.com/photo-1582722872445-44dc5f7e3c8f">
+<h3>Eggs</h3>
 <div class="price">₹60 / kg</div>
-<button onclick="add()">Add to Cart</button>
+<button onclick="add(60)">Add to Cart</button>
 </div>
+
 </div>
 
 </div>
 
 </section>
-
-<!-- ABOUT -->
 
 <section id="about">
 
@@ -277,8 +265,6 @@ We use ancient agricultural techniques that protect soil health and produce heal
 </div>
 
 </section>
-
-<!-- CONTACT -->
 
 <section id="contact">
 
@@ -300,11 +286,27 @@ Andhra Pradesh
 
 </section>
 
-<!-- CART -->
+<section class="payment" id="payment">
+
+<h2>Scan & Pay</h2>
+
+<p>Total Amount: ₹<span id="payAmount"></span></p>
+
+<img id="qr">
+
+<p id="timer"></p>
+
+<button onclick="confirmPayment()">I Have Paid</button>
+
+</section>
 
 <div class="cart">
 
 Cart Items: <span id="cart">0</span>
+
+<br>
+
+Total: ₹<span id="total">0</span>
 
 <br><br>
 
@@ -321,14 +323,79 @@ Fresh Natural Farm Vegetables
 <script>
 
 let cart=0
+let total=0
+let timer
 
-function add(){
+function add(price){
 cart++
+total+=price
 document.getElementById("cart").innerText=cart
+document.getElementById("total").innerText=total
 }
 
 function buy(){
-alert("Call 7780339811 to place your order")
+
+if(total===0){
+alert("Add items first")
+return
+}
+
+document.getElementById("payAmount").innerText=total
+
+let upi="upi://pay?pa=7780339811@kotak811&pn=MaheshBabu&am="+total+"&cu=INR"
+
+let qr="https://api.qrserver.com/v1/create-qr-code/?size=300x300&data="+encodeURIComponent(upi)
+
+document.getElementById("qr").src=qr
+
+document.getElementById("payment").style.display="block"
+
+startTimer()
+
+window.scrollTo({top:document.getElementById("payment").offsetTop,behavior:"smooth"})
+
+}
+
+function startTimer(){
+
+let time=60
+
+clearInterval(timer)
+
+timer=setInterval(function(){
+
+document.getElementById("timer").innerText="Complete payment within "+time+" seconds"
+
+time--
+
+if(time<0){
+
+clearInterval(timer)
+
+document.getElementById("timer").innerText="Payment Failed ❌"
+
+cart=0
+total=0
+document.getElementById("cart").innerText=cart
+document.getElementById("total").innerText=total
+
+}
+
+},1000)
+
+}
+
+function confirmPayment(){
+
+clearInterval(timer)
+
+document.getElementById("timer").innerText="Payment Received Successfully ✅"
+
+cart=0
+total=0
+document.getElementById("cart").innerText=cart
+document.getElementById("total").innerText=total
+
 }
 
 </script>
